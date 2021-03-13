@@ -11,7 +11,8 @@ class Visuel:
         self.img_cible = self.open_img("ciblage_tro-oof.png")
 
     #ce que vas devoir faire la class à chaque fois qu'elle est appeler
-    def update(self, tableau, screen):
+    def update(self, MATRICE, screen):
+        tableau = MATRICE.grille
         pos_y = 0
         for ligne in tableau:
             pos_x = 0

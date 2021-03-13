@@ -1,0 +1,9 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Initialisation du Projet}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Première approche}{2}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Vision du Projet}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Les fonctions codés}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Répartition du travail}{3}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Developpement du code}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Description de la structure de donné}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Description de l'algorithme A*}{4}{subsection.3.2}%

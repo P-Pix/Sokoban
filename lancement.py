@@ -13,13 +13,13 @@ pygame.display.set_icon(pygame.image.load("picture/heros.png"))
 
 #determination d'élément et des class
 running = True
+execution = True
 VISU = Visuel()
 WIN = Win()
 RUN = Run()
 RUN_LEVEL = Run_Level()
-MATRICE = Matrice()
+Matrice = Matrice()
 update_screen = False
-new_matrice = []
 COLOR = pygame.Color(0)
 FONT = pygame.font.SysFont("monospace", 25)
 tous_les_etats_pour_le_bot = []
@@ -36,23 +36,33 @@ def affiche(grille):
 #lorsque le jeu s'éxécute
 while running:
     #vérifier si le joueur est en fase de jeu ou non
-    if MATRICE.level_running:
+    if Matrice.level_running:
         #fase de selection du niveau
-        update_screen, new_matrice, running, NIVEAU = RUN_LEVEL.update(running, NIVEAU, screen, update_screen)
-    elif not MATRICE.level_running and not MATRICE.victoire:
+        NIVEAU, Matrice.level_running, Matrice.victoire, running = RUN_LEVEL.update(NIVEAU, screen)
+    elif not Matrice.level_running and not Matrice.victoire:
         #fase de jeu
-        new_matrice, update_screen, running = RUN.update(running, update_screen)
-    elif MATRICE.victoire:
+        if execution:
+            Matrice.init_lancement(NIVEAU)
+            execution = False
+            Matrice = Matrice.move([0, 0])
+            update_screen = True
+        move, running = RUN.update() 
+        if move is not None:
+            Matrice = Matrice.move(move)
+            update_screen = True
+    elif Matrice.victoire:
         #fase de demande pour rejouer ou quitter
-        WIN.update(screen, running, NIVEAU)
+        running, NIVEAU, Matrice = WIN.update(Matrice, screen, running, NIVEAU)
+        execution = True
     if update_screen:
+        affiche(Matrice.grille)
         #fase de maj du screen
-        tous_les_etats_pour_le_bot.append(new_matrice)
+        tous_les_etats_pour_le_bot.append(Matrice)
         screen.fill(COLOR)
         #affiche(new_matrice)
-        VISU.update(new_matrice, screen)
-        MATRICE.victory()
-        MATRICE.texte_screen(screen)
+        VISU.update(Matrice, screen)
+        Matrice.victory()
+        Matrice.texte_screen(screen)
         pygame.display.flip()
         update_screen = False
 

@@ -1,0 +1,77 @@
+\documentclass[a4paper,12pt]{article} %style de document
+\usepackage[utf8]{inputenc} %encodage des caractères
+\usepackage[french]{babel} %paquet de langue français
+\usepackage[T1]{fontenc} %encodage de la police
+\usepackage{times}
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry} %marges
+\usepackage{graphicx} %'affichage des images
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{amssymb}
+\usepackage[useregional]{datetime2}
+\usepackage{datetime}
+\newdateformat{monthyeardate}
+
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[R]{\textbf{page \thepage}}
+\fancyfoot[C]{}
+\fancyfoot[L]{Dans le cadre de l'évaluation Licence1}
+\renewcommand{\headrulewidth}{0pt}
+
+\usepackage{verbatim}
+
+\author{Guillaume LEMONNIER\\Ronan CARRE\\Aboubacar Keita\\
+   L1 info, 2020-2021\\
+   Groupe 4A\\}
+
+\title{Sokoban\\Projet Conception Logicielle}
+
+
+
+\begin{document}
+
+\maketitle
+
+Le jeu Sokoban est un jeu de déplacement de caisse vers un point donné. 
+
+\tableofcontents
+
+\newpage
+
+\section{Initialisation du Projet}
+
+\subsection{Première approche}
+
+\newpage
+
+\section{Vision du Projet}
+
+\subsection{Les fonctions codés}
+
+Le jeu se divise en trois phases clés. La première phase se déroule lors du lancement de l'exécution du programme. Cette phase demande à l'utilisateur de sélectionner le niveau désiré à l'aide des flèches directionnelles. La deuxième phase s'occupe de l'exécution du jeu de son début jusqu'à une victoire. Enfin la dernière phase est celle qui s'occupe de demander à l'utilisateur s'il souhaite relancer un niveau ou s'il souhaite quitter le jeu.
+
+En parallèle à l'exécution du joueur une IA s'exécute  sur le coté droit, afin de mettre en compétition l'IA et le joueur.
+
+\subsection{Répartition du travail}
+
+Dans notre groupe de quatre nous nous sommes répartie le travail de manière suivante : 
+
+Guillaume s'est occupé de la partie jeu du code, car ce dernier, sur son temps personnel, avais codé des petits jeux avec pygame lui procurant alors une plus grande aisance dans l'utilisation de cette librairie. De plus Guillaume a participé à l'écriture du LaTex
+
+Ronan, quand à lui, s'est occupé de coder l'IA avec l'algorithme A* car il se sentais inspiré pour codé l'IA, de plus il a écrit le Beamer pour la présentation orale et à aussi crée des maps pour le jeu en XSB.
+
+Aboubacar s'est occupé d'une partie de l'algorithme A* avec Ronan et aussi d'une partie de la rédation du LaTex avec Guillaume.
+
+Alexis à créé une parie des maps du jeu en XSB.
+
+\newpage
+
+\section{Developpement du code}
+
+\subsection{Description de la structure de donné}
+
+\subsection{Description de l'algorithme A*}
+
+\end{document}
