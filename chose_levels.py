@@ -19,7 +19,7 @@ class Chose_level:
     #ce qui s'execute lors de l'appel du code
     def update(self):
         chargement = open(f"levels/sokoban{self.num_map}.xsb")
-        print(f"le niveau choisi est = {self.num_map}")
+        print(f"le niveau lancé est = {self.num_map}")
         read = chargement.read()
         chargement.close
         read = read.split('\n')

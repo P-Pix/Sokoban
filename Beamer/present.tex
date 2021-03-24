@@ -1,0 +1,103 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usetheme{Berkeley}
+\setbeamercolor*{frametitle}{parent=palette primary}
+ \usecolortheme[RGB={115,90,110}]{structure}
+\title{Projet Sokoban}
+\author{Guillaume \and Ronan \and Alexis \and Aboubacar}
+\institute{Université de Caen Normandie \\ Conception logiciel}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}{Sommaire}
+\tableofcontents
+\end{frame}
+
+\section{Introduction} 
+\begin{frame}
+\frametitle{Introduction}
+\text{IMAGE JEU FINI} \\
+\text{Image jeu wikipedia}
+\end{frame}
+
+\section{Objectif du projet}
+\begin{frame}
+\begin{block}{3 Grand axes du jeu :}
+- Partie de séléction du niveau \\ 
+- Partie jeu  \\
+- Partie victoire \\
+\end{block}
+\begin{block}{3 Grand axes de l'IA :}
+- Algorithme A* \\
+- Algorithme de Dijkstra \\
+- Branches 
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\section{Fonctionalités implémentées}
+\frametitle{Fonctionalités implémentées}
+\begin{block}{Les fonctionalités}
+Mouvement sur 2 axes \\
+Déplacement de boîtes 
+\end{block}
+\begin{block}{Organisations du projet}
+Guillaume: codé le jeu \\ 
+Alexis: créé les maps \\
+Aboubacar: commencé A*  \\
+Ronan: créé les maps, Et a commencé l'IA
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Fonctionalités implémentées}
+
+\end{frame}
+\section{Element technique}
+\begin{frame}{Element technique}
+
+\begin{block}{Fonction move :} 
+- Teste les possibilités \\
+- Déplace les caisses ou non \\
+- Actualise la matrice en prennant en compte les mouvement \\ s'il y en a \\
+\end{block}
+\begin{block}{Fonction chose level:} 
+- Analyse la valeur entrée ( 0 = aléatoire) \\
+- Ouvre le fichier XSB  \\
+- Crée les coordonnées du personnage, caisse, mur ect... 
+\end{block}
+\end{frame}
+
+\section{Architecture du projet}
+\begin{frame}{Architecture du projet}
+
+\end{frame}
+
+\section{Expérimentation}
+\begin{frame}{Expérimentation}
+
+\end{frame}
+
+
+\section{Conclusion}
+\subsection{Récapitulatif}
+\begin{frame}{Conclusion/Récapitulatif}
+
+\end{frame}
+
+\subsection{Amélioration}
+\begin{frame}{Conclusion/Amélioration}
+
+\textbf{Les améliorations de notre sokoban pourrait-être:}
+ - Animation déplacement \\
+ - Sound design \\
+ - Faire que l'utilisateur puissent créer ces propres niveaux \\
+ - Crée une interface graphique
+\end{frame}
+\end{document}

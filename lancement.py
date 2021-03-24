@@ -24,7 +24,6 @@ COLOR = pygame.Color(0)
 FONT = pygame.font.SysFont("monospace", 25)
 tous_les_etats_pour_le_bot = []
 NIVEAU = 0
-CHOIX_NIVEAU_TXT = FONT.render("Niveau désiré 'a' pour validé", 1, (255, 255, 255))
 VICTOIRE = FONT.render("Bravo tu as gagné", 1, (255, 255, 255))
 REJOUER = FONT.render("Pour rejouer = 'a'    Pour quitter = 'b'", 1, (255, 255, 255))
 

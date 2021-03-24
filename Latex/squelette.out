@@ -4,5 +4,20 @@
 \BOOKMARK [2][-]{subsection.2.1}{Les fonctions cod\351s}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.2}{R\351partition du travail}{section.2}% 5
 \BOOKMARK [1][-]{section.3}{Developpement du code}{}% 6
-\BOOKMARK [2][-]{subsection.3.1}{Description de la structure de donn\351}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.2}{Description de l'algorithme A*}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Description des structures de donn\351es}{section.3}% 7
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Matrice}{subsection.3.1}% 8
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Chose Level}{subsection.3.1}% 9
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Les Run}{subsection.3.1}% 10
+\BOOKMARK [3][-]{subsubsection.3.1.4}{Visuel}{subsection.3.1}% 11
+\BOOKMARK [2][-]{subsection.3.2}{Description de l'algorithme A*}{section.3}% 12
+\BOOKMARK [1][-]{section.4}{Construction du Projet}{}% 13
+\BOOKMARK [2][-]{subsection.4.1}{Sch\351ma du projet}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.2}{Cha\356ne de traitement}{section.4}% 15
+\BOOKMARK [1][-]{section.5}{Mise en fonctionnement}{}% 16
+\BOOKMARK [2][-]{subsection.5.1}{C\364t\351 utilisateur}{section.5}% 17
+\BOOKMARK [3][-]{subsubsection.5.1.1}{D\351marrage}{subsection.5.1}% 18
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Phase de Jeu}{subsection.5.1}% 19
+\BOOKMARK [2][-]{subsection.5.2}{C\364t\351 A*}{section.5}% 20
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 21
+\BOOKMARK [2][-]{subsection.6.1}{R\351sum\351 de la conception}{section.6}% 22
+\BOOKMARK [2][-]{subsection.6.2}{Pour aller plus loin}{section.6}% 23

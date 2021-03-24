@@ -5,7 +5,7 @@ class Run_Level():
     def __init__(self):
         self.FONT = pygame.font.SysFont("monospace", 25)
         self.COLOR = pygame.Color(0)
-        self.CHOIX_NIVEAU_TXT = self.FONT.render("Niveau désiré 'a' pour validé", 1, (255, 255, 255))
+        self.CHOIX_NIVEAU_TXT = self.FONT.render("Niveau désiré 'a', 'a' pour validé", 1, (255, 255, 255))
 
     def update(self, NIVEAU, screen):
         screen.blit(self.CHOIX_NIVEAU_TXT, (200, 100))
@@ -25,10 +25,11 @@ class Run_Level():
                 elif event.key == pygame.K_a:
                     NIVEAU = NIVEAU % 19
                     Lancement = False
-        if NIVEAU % 19 != 0:
-            choix_niveau = self.FONT.render(f"{NIVEAU % 19}", 1, (255, 255, 255))
-        else:
-            choix_niveau = self.FONT.render("Aleatoire", 1, (255, 255, 255))
-        screen.blit(choix_niveau, (350, 200))
-        pygame.display.flip()
+        if Lancement:
+            if NIVEAU % 19 != 0:
+                choix_niveau = self.FONT.render(f"{NIVEAU % 19}", 1, (255, 255, 255))
+            else:
+                choix_niveau = self.FONT.render("Aleatoire", 1, (255, 255, 255))
+            screen.blit(choix_niveau, (350, 200))
+            pygame.display.flip()
         return NIVEAU, Lancement, Victoire, running

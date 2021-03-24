@@ -1,0 +1,9 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Objectif du projet}{4}{0}{2}
+\beamer@sectionintoc {3}{Fonctionalit\IeC {\'e}s impl\IeC {\'e}ment\IeC {\'e}es}{5}{0}{3}
+\beamer@sectionintoc {4}{Element technique}{7}{0}{4}
+\beamer@sectionintoc {5}{Architecture du projet}{8}{0}{5}
+\beamer@sectionintoc {6}{Exp\IeC {\'e}rimentation}{9}{0}{6}
+\beamer@sectionintoc {7}{Conclusion}{10}{0}{7}
+\beamer@subsectionintoc {7}{1}{R\IeC {\'e}capitulatif}{10}{0}{7}
+\beamer@subsectionintoc {7}{2}{Am\IeC {\'e}lioration}{11}{0}{7}

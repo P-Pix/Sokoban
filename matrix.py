@@ -33,19 +33,6 @@ class Matrice:
         self.victoire = False
         self.level_running = True
 
-    #mise à jour de la matrice
-    '''
-    def update(self):
-        affiche_1 = []
-        fin = False
-        affiche_1 = copy.deepcopy(self.grille)
-        affiche_1[self.pos_player[0]][self.pos_player[1]] = '@'
-        for elem in self.caisses:
-            affiche_1[elem[0]][elem[1]] = '$'
-        self.affiche = affiche_1
-        return copy.deepcopy(self)
-    '''
-
     #verification de différents éléments avant de move
     def move(self, coord):
         next = copy.deepcopy(self)
