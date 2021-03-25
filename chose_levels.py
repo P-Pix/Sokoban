@@ -11,10 +11,10 @@ class Chose_level:
 
     def selection(self, NIVEAU):
         print(f"le niv choisi est {NIVEAU}")
-        if NIVEAU >= 1 and NIVEAU <= 18:
+        if NIVEAU >= 1 and NIVEAU <= 21:
             self.num_map = NIVEAU
         else:
-            self.num_map = randint(1, 18)
+            self.num_map = randint(1, 21)
 
     #ce qui s'execute lors de l'appel du code
     def update(self):

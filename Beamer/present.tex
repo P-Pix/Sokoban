@@ -2,6 +2,12 @@
 \usepackage[utf8]{inputenc}
 \usetheme{Berkeley}
 \setbeamercolor*{frametitle}{parent=palette primary}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{mwe}
+\usepackage{babel}
  \usecolortheme[RGB={115,90,110}]{structure}
 \title{Projet Sokoban}
 \author{Guillaume \and Ronan \and Alexis \and Aboubacar}
@@ -17,12 +23,14 @@
 \begin{frame}{Sommaire}
 \tableofcontents
 \end{frame}
-
+\frametitle{Introduction}
 \section{Introduction} 
 \begin{frame}
-\frametitle{Introduction}
-\text{IMAGE JEU FINI} \\
-\text{Image jeu wikipedia}
+
+\begin{figure}
+        \centering
+        \includegraphics[scale=0.2]{../picture/wikifini.png}
+\end{figure}
 \end{frame}
 
 \section{Objectif du projet}
@@ -45,7 +53,8 @@
 \frametitle{Fonctionalités implémentées}
 \begin{block}{Les fonctionalités}
 Mouvement sur 2 axes \\
-Déplacement de boîtes 
+Déplacement de boîtes \\
+Choix du niveau 
 \end{block}
 \begin{block}{Organisations du projet}
 Guillaume: codé le jeu \\ 
@@ -88,16 +97,20 @@ Ronan: créé les maps, Et a commencé l'IA
 \section{Conclusion}
 \subsection{Récapitulatif}
 \begin{frame}{Conclusion/Récapitulatif}
+- Choix du niveau \\
+- Fonction move \\
+- Fonction A*  \\
 
 \end{frame}
 
 \subsection{Amélioration}
 \begin{frame}{Conclusion/Amélioration}
 
-\textbf{Les améliorations de notre sokoban pourrait-être:}
+\textbf{Les améliorations de notre sokoban pourrait-être:}\\
  - Animation déplacement \\
  - Sound design \\
  - Faire que l'utilisateur puissent créer ces propres niveaux \\
- - Crée une interface graphique
+ - Crée une interface graphique \\
+ - Caisse change de couleur si bien placé
 \end{frame}
 \end{document}

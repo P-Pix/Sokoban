@@ -20,6 +20,7 @@ class Matrice:
         self.balise = self.level.balise #correct
         self.num_map = self.level.num_map #correct
         self.elem_precedent = []
+        self.correct = 0
 
     def init_lancement(self, NIVEAU):
         self.level.selection(NIVEAU)
@@ -55,9 +56,11 @@ class Matrice:
                             compteur += 1
                     else:
                         print("impossible")
+                        self.victory(next)
                         return next
                 else:
                     print("impossible")
+                    self.victory(next)
                     return next
             #deplacement du personnage et  stockage de sa position précédente pour refaire la matrice
             next.elem_precedent = next.mape_font[next.pos_player[0] + coord[0]][next.pos_player[1] + coord[1]]
@@ -68,26 +71,31 @@ class Matrice:
             next.pos_player[1] += coord[1]
             next.grille[next.pos_player[0]][next.pos_player[1]] = '@'
             next.total_dep += 1
+            self.victory(next)
             #print(f"la coordonné du perso est = {self.pos_player}")
             return next
         else:
             print("impossible")
+            self.victory(next)
             return next
     
-    def victory(self):
-        self.correct = 0
-        for caisse in self.caisses:
-            for case in self.balise:
+    def victory(self, next):
+        next.correct = 0
+        for caisse in next.caisses:
+            for case in next.balise:
                 if caisse == case:
-                    self.correct += 1
-                    if self.correct == len(self.caisses):
-                        self.victoire = True
+                    next.correct += 1
+                    if next.correct == len(next.caisses):
+                        next.victoire = True
+        next.correct -= len(next.caisses)
+        next.correct *= -1
+        
     
     def texte_screen(self, screen):
         font = pygame.font.SysFont("monospace", 25)
         niveau_txt = font.render(f"Le niveau actuel est le niveau {self.level.num_map}", 1, self.blanc)
         screen.blit(niveau_txt, (20, 340))
-        caisse_text = font.render(f"Il y a {self.correct} / {len(self.caisses)} caisse(s) bien placé", 1, self.blanc)
+        caisse_text = font.render(f"Il y a {self.correct} / {len(self.caisses)} caisse(s) mal placé", 1, self.blanc)
         screen.blit(caisse_text, (20, 360))
         move_txt = font.render(f"Il y a {self.total_dep} deplacement(s) fait", 1, self.blanc)
         screen.blit(move_txt, (20, 380))

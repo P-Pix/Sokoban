@@ -4,7 +4,10 @@ from visuel import Visuel
 from run_victory import Win
 from run import Run
 from run_level import Run_Level
-
+"""
+from AI import Etats
+from AI import Heuristic
+"""
 #initialisation habituel de pygame
 pygame.init()
 pygame.display.set_caption("Sokoban")
@@ -17,8 +20,10 @@ execution = True
 VISU = Visuel()
 WIN = Win()
 RUN = Run()
+#Heuri = Heuristic() 
 RUN_LEVEL = Run_Level()
 Matrice = Matrice()
+#Etat = Etats()
 update_screen = False
 COLOR = pygame.Color(0)
 FONT = pygame.font.SysFont("monospace", 25)
@@ -55,12 +60,13 @@ while running:
         execution = True
     if update_screen:
         affiche(Matrice.grille)
+        #Etat.receveMap(Matrice.grille)
+        #Heuri.boxMalPlacer(Matrice.correct)
         #fase de maj du screen
         tous_les_etats_pour_le_bot.append(Matrice)
         screen.fill(COLOR)
         #affiche(new_matrice)
         VISU.update(Matrice, screen)
-        Matrice.victory()
         Matrice.texte_screen(screen)
         pygame.display.flip()
         update_screen = False
