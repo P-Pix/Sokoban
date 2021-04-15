@@ -99,22 +99,7 @@ class Matrice:
         screen.blit(caisse_text, (20, 360))
         move_txt = font.render(f"Il y a {self.total_dep} deplacement(s) fait", 1, self.blanc)
         screen.blit(move_txt, (20, 380))
+        ia_txt = font.render(f"'a' pour activer l'IA", 1, self.blanc)
+        screen.blit(ia_txt, (20, 400))
 
-    def get_move(self):
-        possibility = []
-        possibility.append(self.test_move([-1, 0]))
-        possibility.append(self.test_move([1, 0]))
-        possibility.append(self.test_move([0, -1]))
-        possibility.append(self.test_move([0, 1]))
-        return possibility
-
-    def test_move(self, direction):
-        self.compare[0] = self.pos_bot[0] + direction[0]
-        self.compare[1] = self.pos_bot[1] + direction[1]
-        if self.affiche[self.compare[0]][self.compare[1]] != "#":
-            #verifie si il y a une caisse devant
-            if self.affiche[self.compare[0]][self.compare[1]] == '$':
-                #verifie si devant la caisse il n'y a pas d'élément solid
-                if self.affiche[self.compare[0] + direction[0]][self.compare[1] + direction[1]] != '#':
-                    if self.affiche[self.compare[0] + direction[0]][self.compare[1] + direction[1]] != '$':
-                        return direction
+        

@@ -79,7 +79,7 @@ De plus Guillaume a participé à l'écriture du LaTex.
 Ronan, quand à lui, s'est occupé de coder l'IA avec l'algorithme A* car il se sentais inspiré pour codé l'IA.
 De plus il a écrit le Beamer pour la présentation orale et à aussi crée des maps pour le jeu en XSB.
 
-Aboubacar s'est occupé d'une partie de l'algorithme A* avec Ronan et aussi d'une partie de la rédation du LaTex avec Guillaume.
+Aboubacar s'est occupé de transmettre des idée pour le PDF et à aussi participé à la création des niveau.
 
 Alexis à créé une parie des maps du jeu en XSB.
 
@@ -169,6 +169,50 @@ Ainsi en fonction du charactère entrée le code choisira tel ou tel tuile pour 
 
 \subsection{Description de l'algorithme A*}
 
+L'algorithme A* est un algorithme de base de l'inteligence artificielle.
+Cette algorithme, est un algorithme de recherche de chemain.
+Il est souvent utilisé dabs ke domaine du jeu video pour son éfficacité et son exactitude.
+
+Dans notre programme l'agorithme A* se retoruve dans le fichier AIAll.py.
+Ce fichier contient plusieurs class indispensable pour l'execution de l'ia.
+La seule fonction doit etre éxécuté à l'extérieur du fichier est la focntion update de la class ExeAI.
+Cette fonction est le file conducteur de l'ia et lui donne tout ce qu'elle doit faire.
+Cette focntion est assez longue car elle est codé de manière à ce qu'elle soit très visuel par un utilisateur depuis le terminale.
+
+Son éxécution commence par initialiser les paramètres dont elle aura besoin lors de son éxécutrion.
+Puis elle teste les mouvements qu'elle peut réalisé depuis son point de départ.
+Puis jusqu'à ce qu'elle trouve une solution parfaite elle exécute les testes en boucle.
+
+\subsection{Non trivial}
+
+\subsubsection{Makefile}
+
+Makefile est type de fichier servant à réaliser des commandes terminale plus rapide.
+Makefile s'utilise sans extention et uniquement avec un fichier nommé Makefile.
+
+\begin{lstlisting}
+    SRC = lancement.py\
+    EXE3 = python3
+    EXE2 = python2
+    EXE = python
+    exe3:
+        @($(EXE3) $(SRC))
+    exe2:
+        @($(EXE2) $(SRC))
+    exe:
+        @($(EXE) $(SRC))
+\end{lstlisting}
+
+Dans ce fichier le fichier à utilisé est défini par SRC (choix personnel de le nommé comme cela mais aussi due aux normes de nommage).
+Il y a deux EXE afin de s'adapter aux différentes versions de python.
+Pour éxécuter le fichier Makefile dans le terminale il suffit d'écrire "make" suivie du nom de la fonction à utiliser (par exemple pour ma part sur python3 j'écris "make exe3" et le message qui est envoyé dans le terminale est "python3 lancement.py").
+Les fichier Makefile sont souvent utilisés pour les grands projets et donc lorsqu'il y a de nombreux fichiers à executer et donc à compiler.
+
+\subsubsection{Heapq}
+
+La librairie Heapq de python est une librairie servant à trier les état dans une file de donnée.
+Nous l'utilisons pour l'IA, qui due à ces nombreuses possibilité de directions, afin qu'elle puissse controlé automatiquement ses arbres d'éxécutions.
+
 \newpage
 
 \section{Construction du Projet}
@@ -176,6 +220,7 @@ Ainsi en fonction du charactère entrée le code choisira tel ou tel tuile pour 
 \subsection{Schéma du projet}
 
 \setlength{\unitlength}{1mm}
+
 \begin{picture}(40,20)
 
 \put(55,0)
@@ -208,7 +253,7 @@ Ainsi en fonction du charactère entrée le code choisira tel ou tel tuile pour 
 }
 \put(30, -80)
 {
-    \framebox(30, 20){AI.py}
+    \framebox(30, 20){AIAll.py}
 }
 \put(75, -100)
 {
@@ -318,8 +363,78 @@ Enfin les zones vides sont représenté par de l'herbe \includegraphics{../pictu
 Cette représentation est liée à la grille qui est envoyé dans la fonction update de visuel.py.
 Chaque représenation visuel est indépendante et redessine intégrallement la fenêtre lors d'une action.
 
+Lors de son fonctionnement, à chaque mouvement du joueur la matrice se met à jour et est redessiné.
+Alors au coeur du programme, la fonction move de la classe Matrice, crée une nouvelle Matrice qui sera alors une nouvelle Matrice.grille.
+Cette nouvelle Matrice.grille est une nouvelle liste de liste composé de chaque nouvelle position de chaque éléments.
+Cette nouvelle class est alors la class utilisé pour l'affichage de la matrice.
+La nouvelle Matrice se retrouve alors dans le hub du programme afin d'être analysé puis affiché dans le fichier du visuel.
 
 \subsection{Côté A*}
+
+\subsubsection{Les temps de l'IA}
+
+Afin de vérifié l'éfficité de l'IA sur le programme nous avons testé tous les niveau avec l'IA s'éxécutant.
+
+Niveau 1 : Indéfini - Indéfini
+
+Niveau 2 : Indéfini - Indéfini
+
+Niveau 3 : Indéfini - Indéfini
+
+Niveau 4 : Indéfini - Indéfini
+
+Niveau 5 : Indéfini - Indéfini
+
+Niveau 6 : Indéfini - Indéfini
+
+Niveau 7 : Indéfini - Indéfini
+
+Niveau 8 : Indéfini - Indéfini
+
+Niveau 9 : Indéfini - Indéfini
+
+Niveau 10 : Indéfini - Indéfini
+
+Niveau 11 : Indéfini - Indéfini
+
+Niveau 12 : Indéfini - Indéfini
+
+Niveau 13 : Indéfini - Indéfini
+
+Niveau 14 : Indéfini - Indéfini
+
+Niveau 15 : Indéfini - Indéfini
+
+Niveau 16 : Indéfini - Indéfini
+
+Niveau 17 : Indéfini - Indéfini
+
+Niveau 18 : moins 1 secondes - 16 secondes
+
+Niveau 19 : 17 minutes 16 secondes - Indéfini
+
+Niveau 20 : 3 minutes 27 secondes - Indéfini
+
+Niveau 21 : Indéfini - Indéfini
+
+Il existe deux versions du code de AIAll, une version avec du texte dans le terminale afin de voir ce qui se passe, et une version sans texte afin d'améliorer sa vitesse d'éxécution.
+Les temps indiqué comme étant indéfini sont soit des niveau où l'ia s'arrète avant d'avoir trouvé le chemain, soit que nous n'avons pas trouvé le temps de le tester (certain teste pouvants dépasser les 10h d'éxécutions).
+Tous ces temps ont étaient réalisé sur un ordinateur portable équipé d'un Processeur IntelCore I5 9th 3.6GHz (cela montre ainsi que l'éxécution de l'IA nécéssite de de nombreuses étapes d'éxécutions).
+
+\subsubsection{Sortie de L'IA}
+
+La sortie de l'IA est une liste de lettre : ['e', 'e', 'e', 'e', 'e', 's', 's', 'w', 'W', 'e', 's', 's', 'W', 'e', 'e', 's', 's', 'w', 'w', 'w', 'w', 'N', 'w', 'n', 'n', 'E', 'N', 's', 'S', 'w'].
+Les lettres sont des références aux directions d'une rose des vents.
+
+S et s = South
+
+N et n = North
+
+E et e = East
+
+W et w = West
+
+La différence entre les lettres majuscule et les minuscules est que les majuscule désigne le fait qu'il s'agit d'un mouvement lié à un déplacement d'une caisse.
 
 \newpage
 
@@ -329,21 +444,23 @@ Chaque représenation visuel est indépendante et redessine intégrallement la f
 
 La conception du jeu à été entièrement réalisé par Guillaume LEMONNIER.
 Bien qu'au départ il y eu une répartition du travail de manière homogène, l'absentéhisme due au confinement, à changer les rôles et à changer la répartition du travail.
-Quand à l'IA, elle a été entièrement réalisé par Ronan CARRE pour mêmes raisons qui ont poussé Guillaume LEMONNIER à réalisé seul le jeu.
+Quand à l'IA, elle a été entièrement réalisé par Ronan CARRE pour mêmes raisons qui ont poussé Guillaume LEMONNIER à réalisé le jeu.
 
 Le jeu se déroule en trois phases.
 La phase de selection de niveau.
 La phase d'éxécution du niveau.
 Et la phase de relancement ou non du jeu.
 
-L'IA quand à elle 
+L'IA quand à elle a la possibilité d'être activé lors de la deuxième phase de jeu uniquement pour résoudre le niveau.
+Cependant elle ne garde pas en mémoire le niveau qu'elle à réalisé.
+En effet si il y a une nouvelle éxécution de l'ia sur le même niveau et cela sans redémarrer le programme, l'IA devra de nouveau faire le calcul pour le niveau.
 
 \subsection{Pour aller plus loin}
 
 Pour aller pour loin nous avons penssé à plusieurs améliorations tels que ajouter du sound design.
 Afin de rendre le jeu plus vivant et réaliste pour l'utilisateur.
 Nous avions aussi pensé à ajouter des animation de déplacement pour l'utilisateur, afin de rendre le jeu moins rigide visuellement mais toujours utilisable pour l'IA.
-Enfin nous avons pensé à créer une nouvelle phase du jeu, en parralèle de l'execution de niveeau, un mode de création de niveau à la sourie avec les blocs sur le côté.
+Enfin nous avons pensé à créer une nouvelle phase du jeu, en parralèle de l'execution de niveau, un mode de création de niveau à la sourie avec les blocs sur le côté.
 Le joueur aurais alors uniquement à selectionner une case pour en faire un élément.
 Suite à sa conception le niveau serait enregistré en XSB et tester par l'IA pour vérifié sa faisabilité.
 

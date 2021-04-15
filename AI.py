@@ -1,156 +1,93 @@
-# code de l'ia
-import 
+""" 
+Créé par ronan, le 30/03/2021 en Python 3.7
+Lien entre notion état est classe matrice , Methode utilisé déjà présente dans la classe matrice,
+Methode action possible dans la classe matrie , Renvoie nouvelle matrice que on pourra traité.
+""""
 
-class IA:
-	
-	def __init__(self,Matrice):
-		
-		self.open = Matrice
-		self.mouvement = 0
-		self.father = None
-		self.Etatfinal = self.correct  #à retravailler !!!
-		
-	def move (self,coord):
-		
-		
-		while open != None:
-			
-			
-		
-# coding: utf8
-
-#Sodoban
-# 1- dessin du plateau
-# 3- affichage d'un état
+import heapq
 
 
-# source: etat.py #########################################"
 
-class Etat(object):
-    """ les états du graphe """
-
-    #structure des données
-
-    # position du personnage X,Y
-    pers=[None, None]
+def heuristic(posPlayer, posCaisses):
+	distance = 0
+    complete = []
+    for i in range len(matrice.balise):
+        autreListe = []
+        for x in range len(matrice.caisses):
+            balise = matrice.balise[i]
+            caisse = matrice.caisses[x]
+            ydistance = balise[0] - caisse[0] 
+            xdistance = balise[1] - caisse[1]
+            totalDistance = xdistance * xdistance + ydistance * ydistance
+            totalDistance = sqrt(totalDistance)
+            autreListe.append(totalDistance)
+        complete.append(autreListe)
+    return complete
+        	
+def breadthFirstSearch(matrice):
+    beginBox = matrice.caisses
+    beginPlayer = matrice.pos_player
     
-    # liste des positions des caisses X,Y, bool: disponible (reste à déplacer)
-    # liste de taille variable
-    cais=[[None,None, True],
-          [None,None, True]]
+    debutEtat = (beginPlayer,beginBox)
+    frontiere = posMur(matrice)
+    actions = actionPossible(matrice)
+    while 
 
-    # liste des places où ranger les caisses X,Y, bool: disponible (zone vide)
-    #  nbre de places >= nbre de caisses ;)
-    dest=[[None,None, True],
-          [None,None, True]]
+def posCaisses(matrice):
+    return matrice.caisses
 
-    def __init__(self,pers=[1,1],cais=[[2,5,True]],dest=[[5,10,True]]):
-        self.pers=pers
-        self.cais=cais
-        self.dest=dest
-        
-init=Etat(pers=[3,4],
-          cais=[[1,5,True],[2,7,False]],
-          dest=[[5,6,True],[2,7,False]])
+def posMur(matrice):
+  stock = []
+  for y in range matrice.grille:
+    for x in range y:
+      if(x == '#'):
+        stock.extend([y, x])
+  return stock
 
-	
+def posPlayer(matrice):
+    return matrice.pos_player
 
-# source: plateau.py #########################################"
+class fileDePriorite:
+   #Définie la file de priorité des données des listes utilisés"""
+    def  __init__(self):
+        self.Heap = []
+        self.Count = 0
 
-class Plateau(object):
-    """ support de jeu """
+    def push(self, item, priority):
+        #Ajoute un item dans la queu de priorité"
+        entry = (priority, self.Count, item)
+        heapq.heappush(self.Heap, entry)
+        #Tas, Entry c'est lévenement"
+        self.Count += 1
 
-    # caractères utilisables pour chacune des cases
-    c_mur='#'
-    c_vide='.'
-    c_pers='@'
-    c_dispo='?'        # disponible pour placer une caisse
-    c_caiss='!'
-    c_occup='X'        # place occupée par une caisse
-    
-    def __init__(self,larg=15,haut=12,etat=init):
-        self.larg=larg
-        self.haut=haut
-        
-        # modèle de ligne vide et de mur haut & bas
-        hb=[] # haut bas
-        for i in range(0,larg):
-            hb.append(self.c_mur)
+    def pop(self):
+        #Retire un item qui est le plus intéressant
+        (_, _, item) = heapq.heappop(self.Heap)
+        #heapq return 3 valeur, et on utilise que la dernière"
+        return item
 
-        lv=[self.c_mur]
-        for i in range(0+1,larg-1):
-           lv.append(self.c_vide)
-        lv.append(self.c_mur)
-        
-        # construction du dessin
-        self.dessin=[hb[:]]
-        for i in range(1,self.haut-1):
-            self.dessin.append(lv[:])
-        self.dessin.append(hb[:])
-        
-        # ajout de l'état
-        #personnage
-        self.dessin[init.pers[0]][init.pers[1]]=self.c_pers
+    def vide(self):
+        #queu vide"
+        return len(self.Heap) == 0
 
-        # caisses
-        for x in init.cais:
-            if x[2]:
-                self.dessin[x[0]][x[1]]=self.c_caiss
-            else:
-                self.dessin[x[0]][x[1]]=self.c_occup
-
-        # places à utiliser
-        for x in init.dest:
-            if x[2]:
-                self.dessin[x[0]][x[1]]=self.c_dispo
-            else:
-                self.dessin[x[0]][x[1]]=self.c_occup #redondance!#
-
-       
+def astar(matrice):
+    closeList = []
+    openList = fileDePriorite()
+    openList.push(matrice.pos_player)
+    while openList != []:
+        u = openList.
+        if u[1] == matrice.balise[1] and u[0] == matrice.balise[0]:
             
-    def dessine(self):
-        for i in range(0,self.haut):
-            for j in range(0,self.larg):
-                print(f"{self.dessin[i][j]} ",end="")
-            print()
-    
-        
-if __name__== '__main__' :
-    plateau().dessine()
 
-""" exemple d'exécution
-# # # # # # # # # # # # # # # 
-# . . . . ! . . . . . . . . # 
-# . . . . . . X . . . . . . # 
-# . . . @ . . . . . . . . . # 
-# . . . . . . . . . . . . . # 
-# . . . . . ? . . . . . . . # 
-# . . . . . . . . . . . . . # 
-# . . . . . . . . . . . . . # 
-# . . . . . . . . . . . . . # 
-# . . . . . . . . . . . . . # 
-# . . . . . . . . . . . . . # 
-# # # # # # # # # # # # # # # 
 
-"""
-#Lien entre notion état est classe matrice , Methode utilisé déjà présente dans la classe matrice, 
-#Methode action possible dans la classe matrie , Renvoie nouvelle matrice que on pourra traité.#
-def affiche(grille):
-	for ligne in grille:
-		print("\t".join([str(val) for val in ligne]))
-        
-class Astar:
-	
-	
-class Etats:
 
-	def receveMap(self, mape):
-        pass
-	
-class Heuristic:
-	
-	def boxMalPlacer(self,correct):
-	
-	#nombre de caisse qu'il reste a mettre#
-	pass
+def Cout(actions):
+    #Fonction coup d'une action"
+    return len([x for x in actions if x.islower()])
+
+
+
+def actionPossible(matrice):
+    #liste des possibilités de mouvement du personnage#
+    return matrice.get_move()
 

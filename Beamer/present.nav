@@ -14,39 +14,37 @@
 \headcommand {\beamer@framepages {4}{4}}
 \headcommand {\beamer@sectionpages {4}{4}}
 \headcommand {\beamer@subsectionpages {4}{4}}
-\headcommand {\sectionentry {3}{Fonctionalit\IeC {\'e}s impl\IeC {\'e}ment\IeC {\'e}es}{5}{Fonctionalit\IeC {\'e}s impl\IeC {\'e}ment\IeC {\'e}es}{0}}
+\headcommand {\sectionentry {3}{Fonctionalités implémentées}{5}{Fonctionalités implémentées}{0}}
 \headcommand {\slideentry {3}{0}{0}{5/5}{}{0}}
 \headcommand {\beamer@framepages {5}{5}}
-\headcommand {\slideentry {3}{0}{1}{6/6}{}{0}}
+\headcommand {\beamer@sectionpages {4}{5}}
+\headcommand {\beamer@subsectionpages {4}{5}}
+\headcommand {\sectionentry {4}{Element technique}{6}{Element technique}{0}}
+\headcommand {\slideentry {4}{0}{1}{6/6}{}{0}}
 \headcommand {\beamer@framepages {6}{6}}
-\headcommand {\beamer@sectionpages {4}{6}}
-\headcommand {\beamer@subsectionpages {4}{6}}
-\headcommand {\sectionentry {4}{Element technique}{7}{Element technique}{0}}
-\headcommand {\slideentry {4}{0}{1}{7/7}{}{0}}
+\headcommand {\beamer@sectionpages {6}{6}}
+\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\sectionentry {5}{Architecture du projet}{7}{Architecture du projet}{0}}
+\headcommand {\slideentry {5}{0}{1}{7/7}{}{0}}
 \headcommand {\beamer@framepages {7}{7}}
 \headcommand {\beamer@sectionpages {7}{7}}
 \headcommand {\beamer@subsectionpages {7}{7}}
-\headcommand {\sectionentry {5}{Architecture du projet}{8}{Architecture du projet}{0}}
-\headcommand {\slideentry {5}{0}{1}{8/8}{}{0}}
+\headcommand {\sectionentry {6}{Expérimentation}{8}{Expérimentation}{0}}
+\headcommand {\slideentry {6}{0}{1}{8/8}{}{0}}
 \headcommand {\beamer@framepages {8}{8}}
 \headcommand {\beamer@sectionpages {8}{8}}
 \headcommand {\beamer@subsectionpages {8}{8}}
-\headcommand {\sectionentry {6}{Exp\IeC {\'e}rimentation}{9}{Exp\IeC {\'e}rimentation}{0}}
-\headcommand {\slideentry {6}{0}{1}{9/9}{}{0}}
+\headcommand {\sectionentry {7}{Conclusion}{9}{Conclusion}{0}}
+\headcommand {\beamer@subsectionpages {9}{8}}
+\headcommand {\beamer@subsectionentry {0}{7}{1}{9}{Récapitulatif}}
+\headcommand {\slideentry {7}{1}{1}{9/9}{Récapitulatif}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@sectionpages {9}{9}}
 \headcommand {\beamer@subsectionpages {9}{9}}
-\headcommand {\sectionentry {7}{Conclusion}{10}{Conclusion}{0}}
-\headcommand {\beamer@subsectionpages {10}{9}}
-\headcommand {\beamer@subsectionentry {0}{7}{1}{10}{R\IeC {\'e}capitulatif}}
-\headcommand {\slideentry {7}{1}{1}{10/10}{R\IeC {\'e}capitulatif}{0}}
+\headcommand {\beamer@subsectionentry {0}{7}{2}{10}{Amélioration}}
+\headcommand {\slideentry {7}{2}{1}{10/10}{Amélioration}{0}}
 \headcommand {\beamer@framepages {10}{10}}
+\headcommand {\beamer@partpages {1}{10}}
 \headcommand {\beamer@subsectionpages {10}{10}}
-\headcommand {\beamer@subsectionentry {0}{7}{2}{11}{Am\IeC {\'e}lioration}}
-\headcommand {\slideentry {7}{2}{1}{11/11}{Am\IeC {\'e}lioration}{0}}
-\headcommand {\beamer@framepages {11}{11}}
-\headcommand {\beamer@partpages {1}{11}}
-\headcommand {\beamer@subsectionpages {11}{11}}
-\headcommand {\beamer@sectionpages {10}{11}}
-\headcommand {\beamer@documentpages {11}}
-\headcommand {\gdef \inserttotalframenumber {11}}
+\headcommand {\beamer@sectionpages {9}{10}}
+\headcommand {\beamer@documentpages {10}}
+\headcommand {\gdef \inserttotalframenumber {10}}
